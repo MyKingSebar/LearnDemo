@@ -1,0 +1,10 @@
+<resources>
+
+    <style name="StyleMainButton">
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/design_default_color_primary</item>
+    </style>
+
+
+</resources>

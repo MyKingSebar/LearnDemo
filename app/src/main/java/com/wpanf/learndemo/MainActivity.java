@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,10 +36,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button recyclerview = (Button) findViewById(R.id.main_demo_recyclerview);
+        recyclerview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, com.wpanf.recyclerview.MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
         // Example of a call to a native method
 //        TextView tv = (TextView) findViewById(R.id.sample_text);
 //        tv.setText(stringFromJNI());
-
 
 
     }
@@ -60,8 +69,6 @@ public class MainActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
 
-            Intent intent = new Intent(this, com.wpanf.recyclerview.MainActivity.class);
-            startActivity(intent);
             return true;
         }
 

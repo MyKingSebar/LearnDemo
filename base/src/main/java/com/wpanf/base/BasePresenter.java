@@ -1,5 +1,7 @@
 package com.wpanf.base;
 
+import android.os.Message;
+
 /**
  * Created by wangpanfeng@nationsky.com on 18/9/27.
  */
@@ -10,6 +12,7 @@ public class BasePresenter {
 
     /**
      * used in onCreated
+     *
      * @param view
      */
     public void attachView(BaseView view) {
@@ -31,9 +34,14 @@ public class BasePresenter {
         return baseView;
     }
 
+    public void dispatchMsg(Message message) {
+        if (null != baseView) {
+            baseView.dispatchMsg(message);
+        }
+    }
+
     public void getDataFromNet() {
         //TODO the method of getData(1.from net 2.from database), getback data by Callback
-
 
 
     }

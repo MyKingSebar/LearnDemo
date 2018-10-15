@@ -22,8 +22,6 @@ public class MainActivity extends BaseActivity<MainPresenter> {
     private RAdapter adapter;
     LoadMoreWrapper loadMoreWrapper;
     private List<DataBean> beans = new ArrayList<>();
-    private Handler handler = new Handler();
-
     @Override
     protected void initPresenter() {
         presenter = new MainPresenter();
@@ -65,7 +63,7 @@ public class MainActivity extends BaseActivity<MainPresenter> {
             @Override
             public void onLoadMore() {
                 loadMoreWrapper.startLoad();
-                presenter.getDatas(handler);
+                presenter.getDatas();
             }
         });
         recyclerView.setAdapter(loadMoreWrapper);
@@ -98,7 +96,7 @@ public class MainActivity extends BaseActivity<MainPresenter> {
         IItemTouchHelper helper = new IItemTouchHelper(defaultItemTouchHelperCallBack);
         helper.attachToRecyclerView(recyclerView);
 
-        presenter.getDatas(handler);
+        presenter.getDatas();
     }
 
     @Override
