@@ -16,6 +16,10 @@ android {
             }
         }
     }
+    lintOptions {
+        abortOnError false
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -36,5 +40,8 @@ dependencies {
     })
     testImplementation 'junit:junit:4.12'
     implementation project(':widget:recyclerview')
+    implementation project(':widget:recyclerviewuser')
+
+    annotationProcessor  project(':AnnotationCompiler')
 
 }

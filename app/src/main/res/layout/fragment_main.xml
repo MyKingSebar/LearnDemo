@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.wpanf.learndemo.MainActivityFragment"
-    tools:showIn="@layout/activity_main"
+    tools:showIn="@layout/recyclerviewuser_activity_main"
     android:paddingTop="10dp">
 
     <Button
@@ -15,5 +15,13 @@
         android:text="RecyclerView"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/main_demo_recyclerview_user"
+        style="@style/StyleMainButton"
+        android:text="RecyclerViewUser"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_demo_recyclerview"/>
 
 </android.support.constraint.ConstraintLayout>

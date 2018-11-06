@@ -18,7 +18,6 @@ android {
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
     buildTypes {
         release {
@@ -26,7 +25,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
     sourceSets {
         main {
             if (isDebug.toBoolean()) {
@@ -49,5 +47,6 @@ dependencies {
 
     testImplementation 'junit:junit:4.12'
     api project(':base')
+    annotationProcessor  project(':AnnotationCompiler')
 }
 

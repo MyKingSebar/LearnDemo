@@ -1,1 +1,1 @@
-include ':app', ':base', ':widget:recyclerview'
+include ':app', ':base', ':widget:recyclerview', ':widget:recyclerviewuser', ':AnnotationCompiler'

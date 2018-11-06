@@ -10,8 +10,6 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,6 +42,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button recyclerviewUser = (Button) findViewById(R.id.main_demo_recyclerview_user);
+        recyclerviewUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, com.w.recyclerviewuser.MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         // Example of a call to a native method
 //        TextView tv = (TextView) findViewById(R.id.sample_text);

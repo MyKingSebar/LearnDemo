@@ -1,14 +1,12 @@
 package com.wpanf.recyclerview;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.Message;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.helper.ItemTouchHelper;
 import android.widget.Toast;
 
+import com.w.annotationcompiler.PageRoute;
 import com.wpanf.base.BaseActivity;
 import com.wpanf.recyclerview.presenter.MainPresenter;
 
@@ -16,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+@PageRoute(route = "recyclerview")
 public class MainActivity extends BaseActivity<MainPresenter> {
 
     private RecyclerView recyclerView;
@@ -31,7 +30,6 @@ public class MainActivity extends BaseActivity<MainPresenter> {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recyclerview_main);
-
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview_recyclerview);
 
 //        recyclerView.setLayoutManager(new GridLayoutManager(this, 4));
