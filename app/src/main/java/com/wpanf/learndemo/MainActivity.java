@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Router.getInstance().open(url);
                 Intent intent = new Intent(MainActivity.this, com.wpanf.recyclerview.MainActivity.class);
                 startActivity(intent);
             }

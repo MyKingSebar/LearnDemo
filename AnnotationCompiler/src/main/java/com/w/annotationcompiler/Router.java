@@ -9,6 +9,8 @@ import java.util.Map;
 
 /**
  * Created by wangpanfeng@nationsky.com on 18/11/5.
+ *
+ * TODO 把该类从AnnotationCompiler包中移出来，新建为一个android lib，可以把打开activity的方法封装进来
  */
 public class Router {
 
